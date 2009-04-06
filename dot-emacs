@@ -1,0 +1,98 @@
+(add-to-list 'load-path "~/.emacs.d")
+
+(setq-default user-mail-address "fidelramos@gmail.com")
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Visual customization
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; color theme
+(require 'color-theme)
+(color-theme-initialize)
+(color-theme-dark-laptop)
+
+; skip welcome screen
+(setq inhibit-startup-screen t)
+
+; syntax highlightning on by default
+(setq-default global-font-lock-mode t)
+
+; show column numbers
+(setq-default column-number-mode t)
+
+; show current line
+(setq-default line-number-mode t)
+
+; automatic wrap to 80 columns (TODO)
+; (setq-default fill-column 80)
+; (setq auto-fill-mode 1)
+
+; show selection
+(setq-default transient-mark-mode t)
+
+; show matching parenthesis
+(show-paren-mode t)
+
+; disable the menubar (promotes good emacs memory :)
+(menu-bar-mode nil)
+(scroll-bar-mode nil)
+(tool-bar-mode nil)
+
+; blinking top and bottom lines instead of speaker buzz
+(setq-default visible-bell t)
+
+; always show trailing whitespace
+(setq-default show-trailing-whitespace t)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Behavior
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; backup files are for sissies
+(setq-default make-backup-files nil)
+
+; always indent with spaces
+(setq-default indent-tabs-mode nil)
+(setq-default default-tab-width 4)
+
+; save files to home directory by default
+(setq-default default-directory '~)
+
+; move between windows with SHIFT+arrows
+(windmove-default-keybindings)
+
+; replace yes/no questions with y/n
+(fset 'yes-or-no-p 'y-or-n-p)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Keybindings
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(global-set-key "\M--" 'dabbrev-expand)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Ido (Interactively Do Things)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(require 'ido)
+(ido-mode t)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Uniquify (smart buffer renaming)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(require 'uniquify)
+(setq uniquify-buffer-name-style 'reverse)
+(setq uniquify-separator "/")
+; rename after killing uniquified
+(setq uniquify-after-kill-buffer-p t)
+; don't mess with special buffers
+(setq uniquify-ignore-buffers-re "^\\*")
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Pijaditas
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; display time at status bar
+(setq-default display-time-24hr-format t)
+(display-time)
