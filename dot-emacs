@@ -64,6 +64,9 @@
 ; replace yes/no questions with y/n
 (fset 'yes-or-no-p 'y-or-n-p)
 
+; start server for emacsclient
+(server-start)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Keybindings
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -88,6 +91,13 @@
 (setq uniquify-after-kill-buffer-p t)
 ; don't mess with special buffers
 (setq uniquify-ignore-buffers-re "^\\*")
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Yasnippet (template system)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(require 'yasnippet)
+(yas/load-directory "~/.emacs.d/yasnippets/")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Pijaditas
