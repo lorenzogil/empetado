@@ -1,0 +1,3 @@
+# Author: Fidel Ramos (haplo)
+# --
+{% now "m/d/Y$1 H:i:s" %}
