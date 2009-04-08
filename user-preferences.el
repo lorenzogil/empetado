@@ -1,2 +1,2 @@
-(setq-default user-mail-address "lorenzo.gil.sanchez@gmail.com")
-(color-theme-dark-green)
+(setq-default user-mail-address "fidelramos@gmail.com")
+(color-theme-dark-laptop)
