@@ -1,7 +1,5 @@
 (add-to-list 'load-path "~/.emacs.d")
 
-(setq-default user-mail-address "fidelramos@gmail.com")
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Visual customization
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -9,7 +7,6 @@
 ; color theme
 (require 'color-theme)
 (color-theme-initialize)
-(color-theme-dark-laptop)
 
 ; skip welcome screen
 (setq inhibit-startup-screen t)
@@ -97,7 +94,35 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (require 'yasnippet)
+(yas/initialize)
 (yas/load-directory "~/.emacs.d/yasnippets/")
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Subversion mode
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; psvn is included in Emacs but it's not activated by default
+(require 'psvn)
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; flymake & pyflakes
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; you need pyflakes in your path to make this work
+(when (load "flymake" t)
+  (defun flymake-pyflakes-init ()
+    (let* ((temp-file (flymake-init-create-temp-buffer-copy
+		       'flymake-create-temp-inplace))
+	   (local-file (file-relative-name
+			temp-file
+			(file-name-directory buffer-file-name))))
+      (list "pyflakes" (list local-file))))
+
+  (add-to-list 'flymake-allowed-file-name-masks
+	       '("\\.py\\'" flymake-pyflakes-init)))
+
+(add-hook 'find-file-hook 'flymake-find-file-hook)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Django HTML mode
@@ -115,3 +140,10 @@
 ; display time at status bar
 (setq-default display-time-24hr-format t)
 (display-time)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; user preferences
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; load user preferences at the end to redefine defaults
+(load-library "user-preferences")
