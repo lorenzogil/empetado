@@ -1,0 +1,7 @@
+INSTALLATION
+
+Just put everything at ~/.emacs.d/ and symlink the dotemacs file like this:
+
+ $ ln -s ~/.emacs.d/dotemacs ~/.emacs
+
+That's all!
