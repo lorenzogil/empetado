@@ -7,7 +7,7 @@ Just put everything at ~/.emacs.d/ and symlink the dotemacs file like this:
 That's all!
 
 
-DEPENDENCES
+DEPENDENCIES
 
 empetado configures the following modes and external elisp files. Those
 available using package tools (APT for Debian and Ubuntu in my case) are
