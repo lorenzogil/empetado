@@ -1,7 +1,5 @@
 (add-to-list 'load-path "~/.emacs.d")
 
-(setq-default user-mail-address "fidelramos@gmail.com")
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Visual customization
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -9,7 +7,6 @@
 ; color theme
 (require 'color-theme)
 (color-theme-initialize)
-(color-theme-dark-laptop)
 
 ; skip welcome screen
 (setq inhibit-startup-screen t)
@@ -143,3 +140,10 @@
 ; display time at status bar
 (setq-default display-time-24hr-format t)
 (display-time)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; user preferences
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; load user preferences at the end to redefine defaults
+(load-library "user-preferences")
