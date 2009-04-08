@@ -1,4 +1,3 @@
-# name: pdb
-# author: Fidel Ramos
+# contributor: Fidel Ramos
 # --
 import pdb; pdb.set_trace()
