@@ -4,6 +4,8 @@ Just put everything at ~/.emacs.d/ and symlink the dotemacs file like this:
 
  $ ln -s ~/.emacs.d/dotemacs ~/.emacs
 
+Remember to edit user_preferences.el to at least change your email address.
+
 That's all!
 
 
@@ -16,7 +18,7 @@ Emacs 22 or included in empetado's configuration.
 
  * Color theme (color-theme.el, emacs-goodies-el package).
  * Django HTML template mode (django-html-mode.el).
- *  (ido.el, emacs-goodies-el package).
+ * Wonderful file and buffer finding (ido.el, emacs-goodies-el package).
  * (Good) Subversion support (psvn.el, subversion package).
  * reStructuredText mode (rst.el, python-docutils package).
  * Better buffer renaming (uniquify.el, bundled with Emacs 22).
