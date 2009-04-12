@@ -45,3 +45,44 @@ http://bitbucket.org/agr/ropemacs/src/tip/README.txt
  * ``C-c r n [vfcmp]``: generate variable|function|class|module|package
  * ``M-/``: shortcut for code assist
  * ``M-?``: shortcut for lucky code assist (automatically choose first option)
+
+SVN (psvn)
+----------
+
+http://www.xsteve.at/prg/emacs/psvn.el
+
+``M-x svn-status`` or ``C-x M-v``, and there:
+
+ * ``a``: add
+ * ``A``: add (recursively)
+ * ``b``: blame
+ * ``c``: commit
+ * ``C``: cp
+ * ``D``: rm
+ * ``g``: update
+ * ``i``: info
+ * ``l``: log
+ * ``r``: revert
+ * ``R``: mv
+ * ``=``: diff
+ * ``+``: mkdir
+ * ``~``: get revision
+ * ``^``: examine parent
+ * ``m``: mark
+ * ``u``: unmark
+ * ``DEL``: unmark backwards
+ * ``?``: toggle hide unknown files
+ * ``_``: toggle hide unmodified files
+ * ``* A``: mark added
+ * ``* M``: mark modified
+ * ``* D``: mark deleted
+ * ``* *``: mark changed
+ * ``* .``: mark by extension
+ * ``* %``: mark by regexp
+ * ``P l``: property list
+ * ``P s``: property set
+ * ``P C-i``: edit svn:ignore
+ * ``P X e``: edit svn:externals
+ * ``X v``: resolved
+ * ``X X``: resolve conflicts
+ * ``M-c``: cleanup
