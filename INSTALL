@@ -20,6 +20,7 @@ Emacs 22 or included in empetado's configuration.
  * Django HTML template mode (django-html-mode.el).
  * Wonderful file and buffer finding (ido.el, emacs-goodies-el package).
  * (Good) Subversion support (psvn.el, subversion package).
+ * rope and ropemacs (packages python-rope and python-ropemacs).
  * reStructuredText mode (rst.el, python-docutils package).
  * Better buffer renaming (uniquify.el, bundled with Emacs 22).
  * yasnippet (yasnippet.el, yasnippet package, included because it's not

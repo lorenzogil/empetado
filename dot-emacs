@@ -90,6 +90,23 @@
 (setq uniquify-ignore-buffers-re "^\\*")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Dired-x (extras por dired mode)
+;; http://www.gnu.org/software/emacs/manual/html_mono/dired-x.html
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(add-hook 'dired-load-hook
+          (lambda ()
+            (load "dired-x")
+            ;; Set dired-x global variables here.
+            ))
+(add-hook 'dired-mode-hook
+          (lambda ()
+            ;; Set dired-x buffer-local variables here.
+            (dired-omit-mode t)
+            ))
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Yasnippet (template system)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -103,7 +120,6 @@
 
 ; psvn is included in Emacs but it's not activated by default
 (require 'psvn)
-
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; flymake & pyflakes
@@ -123,6 +139,19 @@
 	       '("\\.py\\'" flymake-pyflakes-init)))
 
 (add-hook 'find-file-hook 'flymake-find-file-hook)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Rope & Ropemacs (Python refactoring)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(setenv "PYMACS_PYTHON" "python2.5")
+(require 'pymacs)
+(pymacs-load "ropemacs" "rope-")
+
+; use M-- and M-_ for code assist instead of M-/ and M-?
+; because they're a PITA for Spanish keyboards
+(define-key ropemacs-local-keymap "\M--" 'rope-code-assist)
+(define-key ropemacs-local-keymap "\M-_" 'rope-lucky-assist)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Django HTML mode
