@@ -1,0 +1,88 @@
+CHEATSHEET
+==========
+
+Ido
+---
+
+http://www.emacswiki.org/emacs/InteractivelyDoThings
+
+ * ``C-s`` and ``C-r``: next and previous match
+ * ``C-f``: change to standard find-file (useful for opening multiple files)
+ * ``C-t``: toggle regexp searching
+ * ``C-p``: toggle between substring and prefix matching
+ * ``C-c``: toggle case sensitivity matching
+ * ``C-x C-d``: dired to current directory
+ * ``M-n`` and ``M-p``: jump to previously used directories
+ * ``M-s``: search files matching input in previously used directories
+ * ``M-f`` and ``M-d``: search for files or directories
+
+Python
+------
+
+Ropemacs
+~~~~~~~~
+
+http://bitbucket.org/agr/ropemacs/src/tip/README.txt
+
+ * ``C-c d``: show documentation
+ * ``C-c f``: find ocurrences of name in the project
+ * ``C-c g``: go to definition of name
+ * ``C-x p f``: find file in project
+ * ``C-x p n [mpfd]``: create new module|package|file|directory
+ * ``C-c r r``: rename
+ * ``C-c r l``: extract variable
+ * ``C-c r m``: extract method
+ * ``C-c r i``: inline
+ * ``C-c r v``: move
+ * ``C-c r x``: restructure
+ * ``C-c r u``: use function
+ * ``C-c r f``: introduce factory
+ * ``C-c r s``: change signature
+ * ``C-c r 1 r``: rename current module
+ * ``C-c r 1 v``: move current module
+ * ``C-c r 1 p``: module to package
+ * ``C-c r o``: organize imports
+ * ``C-c r n [vfcmp]``: generate variable|function|class|module|package
+ * ``M-/``: shortcut for code assist
+ * ``M-?``: shortcut for lucky code assist (automatically choose first option)
+
+SVN (psvn)
+----------
+
+http://www.xsteve.at/prg/emacs/psvn.el
+
+``M-x svn-status`` or ``C-x M-v``, and there:
+
+ * ``a``: add
+ * ``A``: add (recursively)
+ * ``b``: blame
+ * ``c``: commit
+ * ``C``: cp
+ * ``D``: rm
+ * ``g``: update
+ * ``i``: info
+ * ``l``: log
+ * ``r``: revert
+ * ``R``: mv
+ * ``=``: diff
+ * ``+``: mkdir
+ * ``~``: get revision
+ * ``^``: examine parent
+ * ``m``: mark
+ * ``u``: unmark
+ * ``DEL``: unmark backwards
+ * ``?``: toggle hide unknown files
+ * ``_``: toggle hide unmodified files
+ * ``* A``: mark added
+ * ``* M``: mark modified
+ * ``* D``: mark deleted
+ * ``* *``: mark changed
+ * ``* .``: mark by extension
+ * ``* %``: mark by regexp
+ * ``P l``: property list
+ * ``P s``: property set
+ * ``P C-i``: edit svn:ignore
+ * ``P X e``: edit svn:externals
+ * ``X v``: resolved
+ * ``X X``: resolve conflicts
+ * ``M-c``: cleanup

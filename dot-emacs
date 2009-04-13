@@ -67,11 +67,32 @@
 ; start server for emacsclient
 (server-start)
 
+;; keep session between emacs runs (~/.emacs.desktop)
+;; THIS MAKES PYMACS CRASH HARD FOR SOME REASON
+; (setq desktop-save 'if-exists)
+; (desktop-save-mode 1)
+; (setq desktop-globals-to-save
+;       (append '((extended-command-history . 50)
+;                 (file-name-history        . 200)
+;                 (grep-history             . 50)
+;                 (compile-history          . 50)
+;                 (minibuffer-history       . 100)
+;                 (query-replace-history    . 100)
+;                 (read-expression-history  . 100)
+;                 (regexp-history           . 100)
+;                 (regexp-search-ring       . 100)
+;                 (search-ring              . 50)
+;                 (shell-command-history    . 50)
+;                 tags-file-name
+;                 register-alist)))
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Keybindings
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(global-set-key "\M--" 'dabbrev-expand)
+(global-set-key (kbd "M--") 'dabbrev-expand)
+(global-set-key (kbd "C-x C-b") 'ibuffer)
+(global-set-key (kbd "C-x M-v") 'svn-status)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Ido (Interactively Do Things)
@@ -79,6 +100,9 @@
 
 (require 'ido)
 (ido-mode t)
+
+; allow fuzzy searching for consecutive characters when there are no results
+(setq ido-enable-flex-matching t)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Uniquify (smart buffer renaming)
@@ -91,6 +115,23 @@
 (setq uniquify-after-kill-buffer-p t)
 ; don't mess with special buffers
 (setq uniquify-ignore-buffers-re "^\\*")
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Dired-x (extras por dired mode)
+;; http://www.gnu.org/software/emacs/manual/html_mono/dired-x.html
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(add-hook 'dired-load-hook
+          (lambda ()
+            (load "dired-x")
+            ;; Set dired-x global variables here.
+            ))
+(add-hook 'dired-mode-hook
+          (lambda ()
+            ;; Set dired-x buffer-local variables here.
+            (dired-omit-mode t)
+            ))
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Yasnippet (template system)
@@ -106,7 +147,6 @@
 
 ; psvn is included in Emacs but it's not activated by default
 (require 'psvn)
-
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; flymake & pyflakes
@@ -126,6 +166,19 @@
 	       '("\\.py\\'" flymake-pyflakes-init)))
 
 (add-hook 'find-file-hook 'flymake-find-file-hook)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Rope & Ropemacs (Python refactoring)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(setenv "PYMACS_PYTHON" "python2.5")
+(require 'pymacs)
+(pymacs-load "ropemacs" "rope-")
+
+; use M-- and M-_ for code assist instead of M-/ and M-?
+; because they're a PITA for Spanish keyboards
+(define-key ropemacs-local-keymap "\M--" 'rope-code-assist)
+(define-key ropemacs-local-keymap "\M-_" 'rope-lucky-assist)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Django HTML mode
