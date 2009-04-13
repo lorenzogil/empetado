@@ -61,6 +61,9 @@
 ; replace yes/no questions with y/n
 (fset 'yes-or-no-p 'y-or-n-p)
 
+; (much) bigger kill ring
+(setq-default kill-ring-max 1000)
+
 ; start server for emacsclient
 (server-start)
 
