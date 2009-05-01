@@ -149,9 +149,17 @@
 ;; Rope & Ropemacs (Python refactoring)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(setenv "PYMACS_PYTHON" "python2.5")
+;; Initialize Pymacs
 (require 'pymacs)
+(autoload 'pymacs-apply "pymacs")
+(autoload 'pymacs-call "pymacs")
+(autoload 'pymacs-eval "pymacs" nil t)
+(autoload 'pymacs-exec "pymacs" nil t)
+(autoload 'pymacs-load "pymacs" nil t)
+
+;; Initialize Rope
 (pymacs-load "ropemacs" "rope-")
+(setq ropemacs-enable-autoimport t)
 
 ; use M-- and M-_ for code assist instead of M-/ and M-?
 ; because they're a PITA for Spanish keyboards
@@ -166,6 +174,13 @@
 
 ; associate by default with .html files
 (add-to-list 'auto-mode-alist '("\\.html$'" . django-html-mode))
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; SGML mode
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(setq sgml-validate-command '"nsgmls -s -c /usr/share/sgml/xml.soc")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Pijaditas
