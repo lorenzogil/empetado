@@ -67,6 +67,9 @@
 ; start server for emacsclient
 (server-start)
 
+; make dead keys work on graphic environments
+(load-library "iso-transl")
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Keybindings
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
