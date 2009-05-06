@@ -248,7 +248,6 @@
 (global-set-key (kbd "C-x M-b")    'emms-smart-browse)
 (global-set-key (kbd "C-x M-p")    'emms-playlist-mode-go)
 
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Pijaditas
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
