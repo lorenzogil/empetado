@@ -18,6 +18,9 @@ Emacs 22 or included in empetado's configuration.
 
  * Color theme (color-theme.el, emacs-goodies-el package).
  * Django HTML template mode (django-html-mode.el).
+ * EMMS (Emacs MultiMedia System) (emms package).
+   * It requires mpg321, ogg123 and mplayer.
+   * emms-get-lyrics requires w3m.
  * Wonderful file and buffer finding (ido.el, emacs-goodies-el package).
  * (Good) Subversion support (psvn.el, subversion package).
  * rope and ropemacs (packages python-rope and python-ropemacs).
