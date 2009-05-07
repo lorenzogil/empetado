@@ -86,3 +86,21 @@ http://www.xsteve.at/prg/emacs/psvn.el
  * ``X v``: resolved
  * ``X X``: resolve conflicts
  * ``M-c``: cleanup
+
+EMMS
+----
+
+ * ``s-z``: previous song
+ * ``s-x``: start song
+ * ``s-c``: show current song
+ * ``s-v``: stop song
+ * ``s-b``: next song
+ * ``s-s``: toggle shuffle
+ * ``s-left``: seek backward
+ * ``s-right``: seek forward
+ * ``C-x M-p``: show playlist
+ * ``C-x M-f``: play a file
+ * ``C-x M-d``: play a directory
+ * ``C-x M-t``: play a directory (recursively)
+ * ``C-x M-l``: show lyrics for current song
+ * ``C-x M-g``: google for lyrics of the current song

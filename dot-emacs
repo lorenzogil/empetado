@@ -190,6 +190,65 @@
 (add-to-list 'auto-mode-alist '("\\.html$'" . django-html-mode))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; EMMS (Emacs MultiMedia System)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; (add-to-list 'load-path "~/emms/") ; if not installed via APT
+(require 'emms-setup)
+(emms-standard)
+(emms-default-players)
+
+; libtag support
+(require 'emms-info-libtag)
+(setq emms-info-functions '(emms-info-libtag))
+
+; allow seeking
+(require 'emms-player-mpg321-remote)
+(push 'emms-player-mpg321-remote emms-player-list)
+(push 'emms-player-mplayer emms-player-list)
+(push 'emms-player-mplayer-playlist emms-player-list)
+
+; default directory
+(setq emms-source-file-default-directory "~/music/")
+
+; ALSA output
+(setq emms-player-mpg321-parameters '("-o" "alsa"))
+
+(require 'emms-get-lyrics)
+
+; Look for lyrics on Google
+(defun emms-google-for-lyrics ()
+  (interactive)
+  (browse-url
+   (concat "http://www.google.com/search?q="
+           (replace-regexp-in-string " +" "+"
+                                     (concat "lyrics "
+                                             (delete ?- (emms-track-description
+                             (emms-playlist-current-selected-track))))))))
+
+; standard ZXCVB shortcuts (well, almost)
+(global-set-key (kbd "s-z") 'emms-previous)
+(global-set-key (kbd "s-x") 'emms-start)
+(global-set-key (kbd "s-c") 'emms-show)
+(global-set-key (kbd "s-v") 'emms-stop)
+(global-set-key (kbd "s-b") 'emms-next)
+; seeking
+(global-set-key (kbd "s-<kp-right>") 'emms-seek-forward)
+(global-set-key (kbd "s-<kp-left>") 'emms-seek-backward)
+(global-set-key (kbd "s-<right>") 'emms-seek-forward) ; arrows in my laptop
+(global-set-key (kbd "s-<left>") 'emms-seek-backward) ; arrows in my laptop
+; playlist
+(global-set-key (kbd "C-x M-f")    'emms-play-file)
+(global-set-key (kbd "C-x M-d")    'emms-play-directory)
+(global-set-key (kbd "C-x M-t")    'emms-play-directory-tree)
+; utilities
+(global-set-key (kbd "s-s") 'emms-shuffle)
+(global-set-key (kbd "C-x M-l")    'emms-get-lyrics)
+(global-set-key (kbd "C-x M-g")    'emms-google-for-lyrics)
+(global-set-key (kbd "C-x M-b")    'emms-smart-browse)
+(global-set-key (kbd "C-x M-p")    'emms-playlist-mode-go)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Pijaditas
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
