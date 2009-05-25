@@ -215,6 +215,9 @@
 (emms-standard)
 (emms-default-players)
 
+; show song name when changing tracks
+(add-hook 'emms-player-started-hook 'emms-show)
+
 ; libtag support
 (require 'emms-info-libtag)
 (setq emms-info-functions '(emms-info-libtag))
@@ -245,7 +248,7 @@
 
 ; standard ZXCVB shortcuts (well, almost)
 (global-set-key (kbd "s-z") 'emms-previous)
-(global-set-key (kbd "s-x") 'emms-start)
+(global-set-key (kbd "s-x") 'emms-pause)
 (global-set-key (kbd "s-c") 'emms-show)
 (global-set-key (kbd "s-v") 'emms-stop)
 (global-set-key (kbd "s-b") 'emms-next)
@@ -260,7 +263,7 @@
 (global-set-key (kbd "C-x M-t")    'emms-play-directory-tree)
 ; utilities
 (global-set-key (kbd "s-s") 'emms-shuffle)
-(global-set-key (kbd "C-x M-l")    'emms-get-lyrics)
+(global-set-key (kbd "C-x M-l")    'emms-get-lyrics-current-song)
 (global-set-key (kbd "C-x M-g")    'emms-google-for-lyrics)
 (global-set-key (kbd "C-x M-b")    'emms-smart-browse)
 (global-set-key (kbd "C-x M-p")    'emms-playlist-mode-go)
