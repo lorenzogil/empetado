@@ -94,6 +94,13 @@
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 (global-set-key (kbd "C-x M-v") 'svn-status)
 
+; generic apropos (of any symbol) better than apropos-command
+(global-set-key "\C-ha" 'apropos)
+
+; I hate minimize
+(global-set-key "\C-z" 'ignore)
+(global-set-key "\C-x\C-z" 'ignore)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Ido (Interactively Do Things)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
