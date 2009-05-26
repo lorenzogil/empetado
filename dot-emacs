@@ -64,6 +64,9 @@
 ; (much) bigger kill ring
 (setq-default kill-ring-max 1000)
 
+; enable set goal column (C-x C-n)
+(put 'set-goal-column 'disabled nil)
+
 ; start server for emacsclient
 (server-start)
 
