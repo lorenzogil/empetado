@@ -1,10 +1,43 @@
-CHEATSHEET
-==========
+EMPETADO CHEATSHEET
+===================
+
+This is by no means a complete collection, just what I think is most useful.
+
+Emacs Tricks
+------------
+
+`http://www.emacswiki.org/emacs/EmacsNiftyTricks`_
+`http://www.reddit.com/r/programming/comments/8lfx7/what_emacs_commands_do_you_use_most_and_find_most/`_
+
+ * ``M-m``: move to current line indentation
+ * ``M-h``: mark paragraph
+ * ``M-@``: mark word
+ * ``C-M-f`` and ``C-M-b``: next/previous sexp
+ * ``C-M-@``: mark sexp
+ * ``C-x h``: mark entire buffer
+ * ``C-x C-x``: exchange current position and mark
+ * ``C-u C-SPC``: go to previous mark point
+ * ``M-t``: transpose words
+ * ``C-M-t``: transpose sexps
+ * ``C-x r k``: kill rectangle
+ * ``C-x r y``: yank rectangle
+ * ``C-x r o``: open rectangle
+ * ``C-x r c``: clear rectangle
+ * ``C-x r t``: replaces rectangle with text
+ * ``C-x (``: start macro
+ * ``C-x )``: end macro
+ * ``C-x e``: execute macro (keep pressing e to repeat)
+ * ``F3`` and ``F4``: start/end macro, also insert macro count and repeat macro
+ * ``M-g g`` or ``M-g M-g``: go to line
+ * ``M-|``: filter region through shell command
+ * ``M-\``: delete horizontal space
+ * ``M-^``: delete indendation
+ * ``C-M-\``: indent region
 
 Ido
 ---
 
-http://www.emacswiki.org/emacs/InteractivelyDoThings
+`http://www.emacswiki.org/emacs/InteractivelyDoThings`_
 
  * ``C-s`` and ``C-r``: next and previous match
  * ``C-f``: change to standard find-file (useful for opening multiple files)
@@ -16,13 +49,10 @@ http://www.emacswiki.org/emacs/InteractivelyDoThings
  * ``M-s``: search files matching input in previously used directories
  * ``M-f`` and ``M-d``: search for files or directories
 
-Python
-------
-
 Ropemacs
-~~~~~~~~
+--------
 
-http://bitbucket.org/agr/ropemacs/src/tip/README.txt
+`http://bitbucket.org/agr/ropemacs/src/tip/README.txt`_
 
  * ``C-c d``: show documentation
  * ``C-c f``: find ocurrences of name in the project
@@ -49,7 +79,7 @@ http://bitbucket.org/agr/ropemacs/src/tip/README.txt
 SVN (psvn)
 ----------
 
-http://www.xsteve.at/prg/emacs/psvn.el
+`http://www.xsteve.at/prg/emacs/psvn.el`_
 
 ``M-x svn-status`` or ``C-x M-v``, and there:
 
