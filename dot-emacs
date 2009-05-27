@@ -1,4 +1,5 @@
 (add-to-list 'load-path "~/.emacs.d")
+(add-to-list 'load-path "~/.emacs.d/autocomplete")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Visual customization
@@ -147,7 +148,6 @@
             (dired-omit-mode t)
             ))
 
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Yasnippet (template system)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -186,14 +186,14 @@
 ;; Rope & Ropemacs (Python refactoring)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(setenv "PYMACS_PYTHON" "python2.5")
-(require 'pymacs)
-(pymacs-load "ropemacs" "rope-")
+(autoload 'pymacs-apply "pymacs")
+(autoload 'pymacs-call "pymacs")
+(autoload 'pymacs-eval "pymacs" nil t)
+(autoload 'pymacs-exec "pymacs" nil t)
+(autoload 'pymacs-load "pymacs" nil t)
 
-; use M-- and M-_ for code assist instead of M-/ and M-?
-; because they're a PITA for Spanish keyboards
-(define-key ropemacs-local-keymap "\M--" 'rope-code-assist)
-(define-key ropemacs-local-keymap "\M-_" 'rope-lucky-assist)
+(pymacs-load "ropemacs" "rope-")
+(setq ropemacs-enable-autoimport t)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Django HTML mode
@@ -275,6 +275,21 @@
 (global-set-key (kbd "C-x M-g")    'emms-google-for-lyrics)
 (global-set-key (kbd "C-x M-b")    'emms-smart-browse)
 (global-set-key (kbd "C-x M-p")    'emms-playlist-mode-go)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Autocomplete
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(require 'auto-complete)
+(require 'auto-complete-css)
+(require 'auto-complete-python)
+(require 'auto-complete-yasnippet)
+(global-auto-complete-mode t)
+(define-key ac-complete-mode-map "\t" 'ac-complete)
+(define-key ac-complete-mode-map "\r" nil)
+(add-hook 'python-mode-hook
+          (lambda ()
+            (setq ac-sources '(ac-source-ropemacs ac-source-yasnippet))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Pijaditas
