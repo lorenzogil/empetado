@@ -72,23 +72,22 @@
 (server-start)
 
 ;; keep session between emacs runs (~/.emacs.desktop)
-;; THIS MAKES PYMACS CRASH HARD FOR SOME REASON
-; (setq desktop-save 'if-exists)
-; (desktop-save-mode 1)
-; (setq desktop-globals-to-save
-;       (append '((extended-command-history . 50)
-;                 (file-name-history        . 200)
-;                 (grep-history             . 50)
-;                 (compile-history          . 50)
-;                 (minibuffer-history       . 100)
-;                 (query-replace-history    . 100)
-;                 (read-expression-history  . 100)
-;                 (regexp-history           . 100)
-;                 (regexp-search-ring       . 100)
-;                 (search-ring              . 50)
-;                 (shell-command-history    . 50)
-;                 tags-file-name
-;                 register-alist)))
+(setq desktop-save 'if-exists)
+(desktop-save-mode 1)
+(setq desktop-globals-to-save
+      (append '((extended-command-history . 50)
+                (file-name-history        . 200)
+                (grep-history             . 50)
+                (compile-history          . 50)
+                (minibuffer-history       . 100)
+                (query-replace-history    . 100)
+                (read-expression-history  . 100)
+                (regexp-history           . 100)
+                (regexp-search-ring       . 100)
+                (search-ring              . 50)
+                (shell-command-history    . 50)
+                tags-file-name
+                register-alist)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Keybindings
