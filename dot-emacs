@@ -97,6 +97,10 @@
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 (global-set-key (kbd "C-x M-v") 'svn-status)
 
+; font size
+(define-key global-map (kbd "C-M-+") 'text-scale-increase)
+(define-key global-map (kbd "C-M--") 'text-scale-decrease)
+
 ; generic apropos (of any symbol) better than apropos-command
 (global-set-key "\C-ha" 'apropos)
 
