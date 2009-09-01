@@ -72,9 +72,6 @@
 ; enable set goal column (C-x C-n)
 (put 'set-goal-column 'disabled nil)
 
-; start server for emacsclient
-(server-start)
-
 ;; keep session between emacs runs (~/.emacs.desktop)
 (setq desktop-save 'if-exists)
 (desktop-save-mode 1)
