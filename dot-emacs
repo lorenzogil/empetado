@@ -42,6 +42,10 @@
 ; always show trailing whitespace
 (setq-default show-trailing-whitespace t)
 
+; required for non-English keys (like dead acute) to work
+; http://osdir.com/ml/help-gnu-emacs-gnu/2009-05/msg00170.html
+(require "iso-transl")
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Behavior
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
