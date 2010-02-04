@@ -49,6 +49,29 @@ Ido
  * ``M-s``: search files matching input in previously used directories
  * ``M-f`` and ``M-d``: search for files or directories
 
+Org-mode
+--------
+
+`http://orgmode.org/manual/index.html`_
+
+ * ``C-a-a``: Agenda for current week
+ * ``C-a-t``: Global list of TODO tasks
+ * ``M-S-Return``: Insert new TODO task
+ * ``C-c l``: Store link
+ * ``C-c C-l``: Insert link (including stored links)
+ * ``C-c C-t``: Mark task under the cursor as DONE
+ * ``C-c C-s``: Schedule task under the cursor
+ * ``C-c C-o``: Open link under the cursor
+ * ``S-Tab``: Toggle headings folding
+
+For anniversaries and birthdays to appear in agenda mode create and org
+file with one birthday per line in these formats::
+
+  %%(diary-anniversary  month day) XYZ's birthday
+  %%(diary-anniversary  month day year) XYZ is %d years old
+
+Full info in `http://orgmode.org/manual/Weekly_002fdaily-agenda.html`_
+
 Ropemacs
 --------
 

@@ -28,3 +28,4 @@ Emacs 22 or included in empetado's configuration.
  * Better buffer renaming (uniquify.el, bundled with Emacs 22).
  * yasnippet (yasnippet.el, yasnippet package, included because it's not
    present in Ubuntu 8.10).
+ * Org-mode (bundled in Emacs 22 and 23).
