@@ -138,10 +138,9 @@
                                 ([(control shift left)] . [(control meta shift left)])))
       org-replace-disputed-keys t)
 
-;; Make TAB the yas trigger key in the org-mode-hook and turn on flyspell mode
+;; Make TAB the yas trigger key in the org-mode-hook
 (add-hook 'org-mode-hook
           (lambda ()
-            ;; yasnippet
             (org-set-local 'yas/trigger-key [tab])
             (define-key yas/keymap [tab] 'yas/next-field-group)))
 
