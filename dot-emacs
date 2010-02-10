@@ -78,6 +78,9 @@
 ; enable set goal column (C-x C-n)
 (put 'set-goal-column 'disabled nil)
 
+; mondays are the first day of the week (for M-x calendar)
+(setq-default calendar-week-start-day 1)
+
 ;; keep session between emacs runs (~/.emacs.desktop)
 (setq desktop-save 'if-exists)
 (desktop-save-mode 1)
