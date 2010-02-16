@@ -7,7 +7,6 @@
 
 ; color theme
 (require 'color-theme)
-(color-theme-initialize)
 
 ; skip welcome screen
 (setq inhibit-startup-screen t)
