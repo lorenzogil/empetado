@@ -12,20 +12,26 @@ That's all!
 DEPENDENCIES
 
 empetado configures the following modes and external elisp files. Those
-available using package tools (APT for Debian and Ubuntu in my case) are
-supposed to be installed system-wide. Those that aren't are either bundled in
-Emacs 22 or included in empetado's configuration.
+available using package tools (APT for Debian in my case) are supposed to be
+installed system-wide. Those that aren't are either bundled in Emacs 23 or
+included in empetado's configuration.
+
+empetado only supports Emacs 23.
+
+An incomplete list:
 
  * Color theme (color-theme.el, emacs-goodies-el package).
+ * Desktop-mode
  * Django HTML template mode (django-html-mode.el).
  * EMMS (Emacs MultiMedia System) (emms package).
-   * It requires mpg321, ogg123 and mplayer.
+   * Requires mpg321, ogg123 and mplayer.
    * emms-get-lyrics requires w3m.
- * Wonderful file and buffer finding (ido.el, emacs-goodies-el package).
+ * Wonderful file and buffer finding (ido.elc is bundled with Emacs 23).
  * (Good) Subversion support (psvn.el, subversion package).
- * rope and ropemacs (packages python-rope and python-ropemacs).
+ * pymacs, rope and ropemacs (pymacs, python-rope and python-ropemacs packages).
  * reStructuredText mode (rst.el, python-docutils package).
- * Better buffer renaming (uniquify.el, bundled with Emacs 22).
+ * Better buffer renaming (uniquify.el, bundled since Emacs 22).
  * yasnippet (yasnippet.el, yasnippet package, included because it's not
    present in Ubuntu 8.10).
  * Org-mode (bundled in Emacs 22 and 23).
+ * nxml-mode (bundled in Emacs 23).
