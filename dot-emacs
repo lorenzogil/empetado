@@ -233,6 +233,13 @@
 (setq ropemacs-enable-autoimport t)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; XML mode
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; for xml files, use nxml-mode instead of old sgml-mode
+(add-to-list 'auto-mode-alist '("\\.xml\\'" . nxml-mode))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Django HTML mode
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
