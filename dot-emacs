@@ -29,9 +29,9 @@
 (show-paren-mode t)
 
 ; disable the menubar (promotes good emacs memory :)
-(menu-bar-mode nil)
-(scroll-bar-mode nil)
-(tool-bar-mode nil)
+(menu-bar-mode 0)
+(scroll-bar-mode 0)
+(tool-bar-mode 0)
 
 ; blinking top and bottom lines instead of speaker buzz
 (setq-default visible-bell t)
@@ -253,7 +253,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; associate with .rst and .rest extensions
-
 (setq auto-mode-alist
       (append '(("\\.rst$" . rst-mode)
                 ("\\.rest$" . rst-mode)) auto-mode-alist))
