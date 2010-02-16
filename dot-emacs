@@ -25,9 +25,6 @@
 (setq-default fill-column 80)
 ; (setq auto-fill-mode t)
 
-; show selection
-(setq-default transient-mark-mode t)
-
 ; show matching parenthesis
 (show-paren-mode t)
 
