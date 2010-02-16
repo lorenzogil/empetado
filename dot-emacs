@@ -175,7 +175,7 @@
 (setq uniquify-ignore-buffers-re "^\\*")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Dired-x (extras por dired mode)
+;; Dired-x (extras for dired mode)
 ;; http://www.gnu.org/software/emacs/manual/html_mono/dired-x.html
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -202,7 +202,6 @@
 ;; Subversion mode
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; psvn is included in Emacs but it's not activated by default
 (require 'psvn)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
