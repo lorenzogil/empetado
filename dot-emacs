@@ -256,6 +256,9 @@
       (append '(("\\.rst$" . rst-mode)
                 ("\\.rest$" . rst-mode)) auto-mode-alist))
 
+; auto-update the TOC after adjusting a section title
+(add-hook 'rst-adjust-hook 'rst-toc-update)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; EMMS (Emacs MultiMedia System)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

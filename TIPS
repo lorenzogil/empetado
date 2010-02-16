@@ -157,3 +157,22 @@ EMMS
  * ``C-x M-t``: play a directory (recursively)
  * ``C-x M-l``: show lyrics for current song
  * ``C-x M-g``: google for lyrics of the current song
+
+ReST (rst-mode)
+---------------
+
+`http://docutils.sourceforge.net/docs/user/emacs.html`_
+
+ * ``C-c C-a``: adjust section title
+ * ``C-c C-n``: go to next section
+ * ``C-c C-p``: go to previous section
+ * ``C-c C-n``: go to next section
+ * ``C-c C-c``: comment region
+ * ``C-c C-l``: shift region left
+ * ``C-c C-r``: shift region right
+ * ``C-c C-b``: bullet list region
+ * ``C-c C-e``: enumerate region
+ * ``C-c C-d``: block region
+ * ``C-c 1``: compile to HTML
+ * ``C-c 4``: compile to PDF
+
