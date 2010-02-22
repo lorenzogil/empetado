@@ -321,8 +321,16 @@
 (global-set-key (kbd "s-<left>") 'emms-seek-backward) ; arrows in my laptop
 ; playlist
 (global-set-key (kbd "C-x M-f")    'emms-play-file)
+(global-set-key (kbd "C-x M-F")    'emms-add-file)
 (global-set-key (kbd "C-x M-d")    'emms-play-directory)
+(global-set-key (kbd "C-x M-D")    'emms-add-directory)
 (global-set-key (kbd "C-x M-t")    'emms-play-directory-tree)
+(global-set-key (kbd "C-x M-T")    'emms-add-directory-tree)
+(add-hook 'dired-mode-hook
+          (lambda ()
+            (local-set-key [?\M-p] 'emms-play-dired)
+            (local-set-key [?\M-P] 'emms-add-dired)))
+(define-key emms-playlist-mode-map "S" 'emms-shuffle)
 ; utilities
 (global-set-key (kbd "s-s") 'emms-shuffle)
 (global-set-key (kbd "C-x M-l")    'emms-get-lyrics-current-song)
