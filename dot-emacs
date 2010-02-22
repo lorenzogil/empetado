@@ -120,6 +120,10 @@
 (global-set-key (kbd "M-3") 'split-window-horizontally) ; was digit-argument
 (global-set-key (kbd "M-s") 'other-window) ; was center-line
 
+; shortcuts for calc
+(global-set-key "\C-xc" 'calc)
+(global-set-key "\C-xC" 'full-calc)
+
 ; zap-back-to-char
 (global-set-key "\C-\M-z" #'(lambda (arg char)
                               (interactive "p\ncBack-zap to char: ")
