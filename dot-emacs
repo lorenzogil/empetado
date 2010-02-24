@@ -11,6 +11,9 @@
 ; skip welcome screen
 (setq inhibit-startup-screen t)
 
+; no message in scratch buffer
+(setq initial-scratch-message nil)
+
 ; syntax highlightning on by default
 (setq-default global-font-lock-mode t)
 
