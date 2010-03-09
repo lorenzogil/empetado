@@ -54,6 +54,13 @@
      (set-face-foreground 'diff-added "green4")
      (set-face-foreground 'diff-removed "red3")))
 
+; display time at status bar
+(setq-default display-time-24hr-format t)
+(display-time)
+
+; move the mouse away from the cursor
+(mouse-avoidance-mode 'animate)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Behavior
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -385,14 +392,6 @@
 (add-hook 'python-mode-hook
           (lambda ()
             (setq ac-sources '(ac-source-ropemacs ac-source-yasnippet))))
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Pijaditas
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; display time at status bar
-(setq-default display-time-24hr-format t)
-(display-time)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; user preferences
