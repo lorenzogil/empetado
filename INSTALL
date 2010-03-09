@@ -35,3 +35,4 @@ An incomplete list:
    present in Ubuntu 8.10).
  * Org-mode (bundled in Emacs 22 and 23).
  * nxml-mode (bundled in Emacs 23).
+ * ERC (IRC client, erc package in Debian).

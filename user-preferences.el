@@ -7,3 +7,8 @@
                              "~/org/anniversaries.org"))
 
 (color-theme-dark-laptop)
+
+(setq-default erc-email-userid "Haplo")
+(setq-default erc-nick "Haplo")
+; (setq-default erc-nickserv-passwords '((freenode (("nick" . "password")))))
+(setq-default erc-user-full-name "Fidel Ramos")

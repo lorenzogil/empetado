@@ -358,6 +358,20 @@
 (global-set-key (kbd "C-x M-p")    'emms-playlist-mode-go)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; ERC (IRC client)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(setq-default erc-modules
+              '(autoaway autojoin button completion fill irccontrols list match
+                menu move-to-prompt netsplit networks noncommands readonly ring
+                scrolltobottom services stamp spelling track truncate))
+(setq-default erc-nick-uniquifier "_")
+(setq-default erc-server "irc.freenode.net")
+(setq-default erc-port 6667)
+(setq-default erc-prompt-for-password nil)
+(setq-default erc-public-away-p t)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Autocomplete
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 

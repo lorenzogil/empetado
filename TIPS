@@ -176,3 +176,11 @@ ReST (rst-mode)
  * ``C-c 1``: compile to HTML
  * ``C-c 4``: compile to PDF
 
+ERC
+---
+
+ * ``C-c C-b``: change channel
+ * ``C-c C-j``: join channel
+ * ``C-c C-n``: list people in channel
+ * ``C-c C-p``: quit channel
+ * ``C-c C-q``: quit server
