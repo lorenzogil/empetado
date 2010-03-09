@@ -172,6 +172,10 @@
 ; allow fuzzy searching for consecutive characters when there are no results
 (setq ido-enable-flex-matching t)
 
+; take filename from cursor if exists
+(setq ido-use-filename-at-point '(guess))
+(setq ido-use-url-at-point t)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; smex (Ido-like M-x enhancement)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
