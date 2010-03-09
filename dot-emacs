@@ -23,6 +23,9 @@
 ; show current line
 (setq-default line-number-mode t)
 
+; display buffer size in modeline
+(size-indication-mode t)
+
 ; automatic wrap to 80 columns (TODO)
 (setq-default fill-column 80)
 ; (setq auto-fill-mode t)
