@@ -108,6 +108,9 @@
                 tags-file-name
                 register-alist)))
 
+; use ssh, not rsh
+(setq-default remote-shell-program "ssh")
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Keybindings
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
