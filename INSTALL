@@ -28,7 +28,7 @@ An incomplete list:
    * emms-get-lyrics requires w3m.
  * Wonderful file and buffer finding (ido.elc is bundled with Emacs 23).
  * (Good) Subversion support (psvn.el, subversion package).
- * pymacs, rope and ropemacs (pymacs, python-rope and python-ropemacs packages).
+ * emacs-for-python (http://github.com/gabrielelanaro/emacs-for-python).
  * reStructuredText mode (rst.el, python-docutils package).
  * Better buffer renaming (uniquify.el, bundled since Emacs 22).
  * yasnippet (yasnippet.el, yasnippet package).

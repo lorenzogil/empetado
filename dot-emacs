@@ -1,5 +1,5 @@
 (add-to-list 'load-path "~/.emacs.d")
-(add-to-list 'load-path "~/.emacs.d/autocomplete")
+(add-to-list 'load-path "~/.emacs.d/emacs-for-python")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Visual customization
@@ -261,36 +261,12 @@
 (global-set-key (kbd "C-x C-g") 'magit-status)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; flymake & pyflakes
+;; Python environment
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; you need pyflakes in your path to make this work
-(when (load "flymake" t)
-  (defun flymake-pyflakes-init ()
-    (let* ((temp-file (flymake-init-create-temp-buffer-copy
-		       'flymake-create-temp-inplace))
-	   (local-file (file-relative-name
-			temp-file
-			(file-name-directory buffer-file-name))))
-      (list "pyflakes" (list local-file))))
+(load-file "~/.emacs.d/emacs-for-python/epy-init.el")
 
-  (add-to-list 'flymake-allowed-file-name-masks
-	       '("\\.py\\'" flymake-pyflakes-init)))
-
-(add-hook 'find-file-hook 'flymake-find-file-hook)
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Rope & Ropemacs (Python refactoring)
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-(autoload 'pymacs-apply "pymacs")
-(autoload 'pymacs-call "pymacs")
-(autoload 'pymacs-eval "pymacs" nil t)
-(autoload 'pymacs-exec "pymacs" nil t)
-(autoload 'pymacs-load "pymacs" nil t)
-
-(pymacs-load "ropemacs" "rope-")
-(setq ropemacs-enable-autoimport t)
+(load-library "flymake-cursor")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; XML mode
@@ -406,21 +382,6 @@
 (setq-default erc-port 6667)
 (setq-default erc-prompt-for-password nil)
 (setq-default erc-public-away-p t)
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Autocomplete
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-(require 'auto-complete)
-(require 'auto-complete-css)
-(require 'auto-complete-python)
-(require 'auto-complete-yasnippet)
-(global-auto-complete-mode t)
-(define-key ac-complete-mode-map "\t" 'ac-complete)
-(define-key ac-complete-mode-map "\r" nil)
-(add-hook 'python-mode-hook
-          (lambda ()
-            (setq ac-sources '(ac-source-ropemacs ac-source-yasnippet))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Microsoft Office
