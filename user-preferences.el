@@ -6,7 +6,10 @@
                              "~/org/projects.org"
                              "~/org/anniversaries.org"))
 
-(color-theme-dark-laptop)
+(eval-after-load "color-theme"
+  '(progn
+     (color-theme-initialize)
+     (color-theme-dark-laptop)))
 
 (setq-default erc-email-userid "Haplo")
 (setq-default erc-nick "Haplo")
