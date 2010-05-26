@@ -118,6 +118,9 @@
 ; use ssh, not rsh
 (setq-default remote-shell-program "ssh")
 
+; ease operations between two direds side by side
+(setq-default dired-dwim-target t)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Keybindings
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
