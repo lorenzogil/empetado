@@ -78,6 +78,7 @@
 (global-set-key (kbd "M--") 'dabbrev-expand)
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 (global-set-key (kbd "C-x M-v") 'svn-status)
+(global-set-key (kbd "M-g") 'goto-line)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Ido (Interactively Do Things)
@@ -153,24 +154,24 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; Initialize Pymacs
-(autoload 'pymacs-apply "pymacs")
-(autoload 'pymacs-call "pymacs")
-(autoload 'pymacs-eval "pymacs" nil t)
-(autoload 'pymacs-exec "pymacs" nil t)
-(autoload 'pymacs-load "pymacs" nil t)
+;(autoload 'pymacs-apply "pymacs")
+;(autoload 'pymacs-call "pymacs")
+;(autoload 'pymacs-eval "pymacs" nil t)
+;(autoload 'pymacs-exec "pymacs" nil t)
+;(autoload 'pymacs-load "pymacs" nil t)
 
 ;; Initialize Rope
-(pymacs-load "ropemacs" "rope-")
-(setq ropemacs-enable-autoimport t)
+;(pymacs-load "ropemacs" "rope-")
+;(setq ropemacs-enable-autoimport t)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Django HTML mode
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(require 'django-html-mode)
+;(require 'django-html-mode)
 
 ; associate by default with .html files
-(add-to-list 'auto-mode-alist '("\\.html$'" . django-html-mode))
+;(add-to-list 'auto-mode-alist '("\\.html$'" . django-html-mode))
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -193,6 +194,13 @@
 (add-hook 'python-mode-hook
           (lambda ()
             (setq ac-sources '(ac-source-ropemacs ac-source-yasnippet))))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; PHP xdebug support
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(add-to-list 'load-path "~/.emacs.d/geben-0.24")
+(autoload 'geben "geben" "PHP Debugger on Emacs" t)
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Pijaditas
