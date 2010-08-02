@@ -21,7 +21,7 @@ empetado only supports Emacs 23.
 An incomplete list:
 
  * Color theme (color-theme.el, emacs-goodies-el package).
- * Desktop-mode
+ * Desktop-mode.
  * Django HTML template mode (django-html-mode.el).
  * EMMS (Emacs MultiMedia System) (emms package).
    * Requires mpg321, ogg123 and mplayer.
@@ -31,8 +31,8 @@ An incomplete list:
  * pymacs, rope and ropemacs (pymacs, python-rope and python-ropemacs packages).
  * reStructuredText mode (rst.el, python-docutils package).
  * Better buffer renaming (uniquify.el, bundled since Emacs 22).
- * yasnippet (yasnippet.el, yasnippet package, included because it's not
-   present in Ubuntu 8.10).
+ * yasnippet (yasnippet.el, yasnippet package).
  * Org-mode (bundled in Emacs 22 and 23).
  * nxml-mode (bundled in Emacs 23).
  * ERC (IRC client, erc package in Debian).
+ * magit (a Git frontend, http://philjackson.github.com/magit/).
