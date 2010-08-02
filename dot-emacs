@@ -127,7 +127,6 @@
 
 (global-set-key (kbd "M--") 'dabbrev-expand)
 (global-set-key (kbd "C-x C-b") 'ibuffer)
-(global-set-key (kbd "C-x M-v") 'svn-status)
 
 ; font size
 (define-key global-map (kbd "C-M-+") 'text-scale-increase)
@@ -248,6 +247,8 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (require 'psvn)
+
+(global-set-key (kbd "C-x M-v") 'svn-status)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; flymake & pyflakes
