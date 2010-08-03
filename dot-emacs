@@ -194,8 +194,8 @@
 (setq ido-enable-flex-matching t)
 
 ; take filename from cursor if exists
-(setq ido-use-filename-at-point '(guess))
-(setq ido-use-url-at-point t)
+(setq-default ido-use-filename-at-point 'guess)
+(setq-default ido-use-url-at-point 'guess)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; smex (Ido-like M-x enhancement)
