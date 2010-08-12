@@ -36,3 +36,4 @@ An incomplete list:
  * nxml-mode (bundled in Emacs 23).
  * ERC (IRC client, erc package in Debian).
  * magit (a Git frontend, http://philjackson.github.com/magit/).
+ * no-word (open Word files as plain text, requires antiword).
