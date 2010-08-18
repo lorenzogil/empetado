@@ -49,6 +49,17 @@ Ido
  * ``M-s``: search files matching input in previously used directories
  * ``M-f`` and ``M-d``: search for files or directories
 
+Undo-tree
+---------
+
+undo-tree.el upgrades the undo-redo system to work as a tree.
+
+ * ``C-_``: undo.
+ * ``M-_``: redo.
+ * ``C-x u``: show undo tree.
+ * ``C-x r u``: save undo status to register
+ * ``C-x r U``: load undo status from register
+
 Org-mode
 --------
 

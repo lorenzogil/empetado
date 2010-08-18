@@ -121,6 +121,10 @@
 ; ease operations between two direds side by side
 (setq-default dired-dwim-target t)
 
+; use undo-tree for better undo
+(require 'undo-tree)
+(global-undo-tree-mode)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Keybindings
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
