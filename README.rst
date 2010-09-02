@@ -74,3 +74,4 @@ An incomplete list:
  * ERC (IRC client, erc package in Debian).
  * magit (a Git frontend, http://philjackson.github.com/magit/).
  * no-word (open Word files as plain text, requires antiword).
+ * browse-kill-ring (emacs-goodies-el package in Debian)
