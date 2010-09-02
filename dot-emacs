@@ -179,6 +179,9 @@
 (global-set-key (kbd "C-c k") 'browse-kill-ring)
 (global-set-key (kbd "C-c C-k") 'browse-kill-ring)
 
+; region commenting
+(global-set-key (kbd "C-;") 'comment-or-uncomment-region)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Org-mode
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
