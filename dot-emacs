@@ -132,6 +132,14 @@
 (setq x-select-enable-clipboard t)
 (setq interprogram-paste-function 'x-cut-buffer-or-selection-value)
 
+; enable disabled commands, I'm a big guy
+(put 'narrow-to-region 'disabled nil)
+(put 'not-modified 'disabled t)
+(put 'upcase-region 'disabled nil)
+(put 'downcase-region 'disabled nil)
+(put 'erase-buffer 'disabled nil)
+(put 'dired-find-alternate-file 'disabled nil)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Keybindings
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
