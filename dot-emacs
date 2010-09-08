@@ -328,7 +328,7 @@
 
 ; (add-to-list 'load-path "~/emms/") ; if not installed via APT
 (require 'emms-setup)
-(emms-standard)
+(emms-all)
 (emms-default-players)
 
 ; show song name when changing tracks
@@ -350,7 +350,17 @@
 ; ALSA output
 (setq emms-player-mpg321-parameters '("-o" "alsa"))
 
-(require 'emms-get-lyrics)
+; Faster file finding (won't work on Windows, but who cares?)
+(setq emms-source-file-directory-tree-function 'emms-source-file-directory-tree-find)
+
+; Current track name and time in modeline
+(emms-mode-line 1)
+(emms-playing-time 1)
+
+; Lyrics library
+(require 'emms-lyrics)
+(emms-lyrics)
+(setq emms-lyrics-dir "~/music/.lyrics/")
 
 ; Look for lyrics on Google
 (defun emms-google-for-lyrics ()
@@ -390,7 +400,7 @@
 (define-key emms-playlist-mode-map "S" 'emms-shuffle)
 ; utilities
 (global-set-key (kbd "s-s") 'emms-shuffle)
-(global-set-key (kbd "C-x M-l")    'emms-get-lyrics-current-song)
+(global-set-key (kbd "C-x M-l")    'emms-lyrics-toggle)
 (global-set-key (kbd "C-x M-g")    'emms-google-for-lyrics)
 (global-set-key (kbd "C-x M-b")    'emms-smart-browse)
 (global-set-key (kbd "C-x M-p")    'emms-playlist-mode-go)
