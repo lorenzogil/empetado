@@ -359,7 +359,7 @@
 
 ; Lyrics library
 (require 'emms-lyrics)
-(emms-lyrics)
+(emms-lyrics 1)
 (setq emms-lyrics-dir "~/music/.lyrics/")
 
 ; Look for lyrics on Google
