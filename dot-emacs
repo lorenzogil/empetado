@@ -210,6 +210,10 @@
 (setq-default display-time-24hr-format t)
 (display-time)
 
+; google maps support
+(add-to-list 'load-path "~/proyectos/jd-el")
+(require 'google-maps)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; user preferences
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
