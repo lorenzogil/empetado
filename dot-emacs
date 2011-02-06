@@ -345,7 +345,7 @@
 (push 'emms-player-mplayer-playlist emms-player-list)
 
 ; default directory
-(setq emms-source-file-default-directory "~/music/")
+(setq emms-source-file-default-directory "~/Music/")
 
 ; ALSA output
 (setq emms-player-mpg321-parameters '("-o" "alsa"))
@@ -360,7 +360,7 @@
 ; Lyrics library
 (require 'emms-lyrics)
 (emms-lyrics 1)
-(setq emms-lyrics-dir "~/music/.lyrics/")
+(setq emms-lyrics-dir "~/Music/.lyrics/")
 
 ; Look for lyrics on Google
 (defun emms-google-for-lyrics ()
