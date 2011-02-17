@@ -357,11 +357,6 @@
 (emms-mode-line 1)
 (emms-playing-time 1)
 
-; Lyrics library
-(require 'emms-lyrics)
-(emms-lyrics 1)
-(setq emms-lyrics-dir "~/Music/.lyrics/")
-
 ; Look for lyrics on Google
 (defun emms-google-for-lyrics ()
   (interactive)
