@@ -369,7 +369,7 @@
         (tit  (emms-track-get track 'info-title)))
     (if (and alb art tit)
         (cond ((and pmin psec) (format "%s - %s - %s [%s:%s]" alb art tit pmin psec))
-              (ptot (format  "%s - %s - %s [%s:%s]" alb art tit (/ ptot 60) (% ptot 60)))
+              (ptot (format  "%s - %s - %s [%s:%02d]" alb art tit (/ ptot 60) (% ptot 60)))
               (t (emms-track-simple-description track)))
         (emms-track-simple-description track))))
 (setq emms-track-description-function 'my-emms-info-track-description)
