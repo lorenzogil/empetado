@@ -209,6 +209,9 @@
 ; record date and time when a task is marked as DONE
 (setq org-log-done t)
 
+; detect idle time when clock is running
+(setq org-clock-idle-time 10)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Ido (Interactively Do Things)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
