@@ -1,10 +1,10 @@
 (setq user-mail-address "fidelramos@gmail.com")
 (setq user-full-name "Fidel Ramos Sañudo")
 
-(setq org-agenda-files (list "~/Docs/Org/personal.org"
-                             "~/Docs/Org/work.org"
-                             "~/Docs/Org/projects.org"
-                             "~/Docs/Org/anniversaries.org"))
+(setq org-agenda-files (list (concat org-directory "/personal.org")
+                             (concat org-directory "/work.org")
+                             (concat org-directory "/projects.org")
+                             (concat org-directory "/anniversaries.org")))
 
 (eval-after-load "color-theme"
   '(progn

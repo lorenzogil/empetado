@@ -74,8 +74,14 @@ Org-mode
  * ``C-c C-s``: Schedule task under the cursor
  * ``C-c C-o``: Open link under the cursor
  * ``S-Tab``: Toggle headings folding
+ * ``C-c C-x C-i``: Start clock on a task
+ * ``C-c C-x C-o``: Stop clock and compute total time
+ * ``C-c c``: Anytime, go to a special note taking org buffer.
+ * ``C-c C-c``: In note capture mode, save changes and return.
+ * ``C-c C-k``: In note capture mode, ignore changes and return.
+ * ``C-c C-w``: In note capture mode, refile the entry and return.
 
-For anniversaries and birthdays to appear in agenda mode create and org
+For anniversaries and birthdays to appear in agenda mode create an org
 file with one birthday per line in these formats::
 
   %%(diary-anniversary  month day) XYZ's birthday
