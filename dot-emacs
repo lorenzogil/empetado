@@ -1,5 +1,4 @@
 (add-to-list 'load-path "~/.emacs.d")
-(add-to-list 'load-path "~/.emacs.d/emacs-for-python")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Visual customization
@@ -204,12 +203,6 @@
 (setq org-directory "~/Docs/Org")
 (setq org-default-notes-file (concat org-directory "/notes.org"))
 
-;; Make TAB the yas trigger key in the org-mode-hook
-(add-hook 'org-mode-hook
-          (lambda ()
-            (org-set-local 'yas/trigger-key [tab])
-            (define-key yas/keymap [tab] 'yas/next-field-group)))
-
 ; record date and time when a task is marked as DONE
 (setq org-log-done t)
 
@@ -266,14 +259,6 @@
             ;; Set dired-x buffer-local variables here.
             (dired-omit-mode t)
             ))
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Yasnippet (template system)
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-(require 'yasnippet)
-(yas/initialize)
-(yas/load-directory "~/.emacs.d/yasnippets/")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Subversion mode

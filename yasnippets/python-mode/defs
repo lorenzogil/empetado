@@ -1,4 +1,0 @@
-# This was cloned from a TextMate bundle for yasnippet.
-# --
-def ${1:mname}(self${2/([^,])?.*/(?1:, )/}${2:arg}):
-	${3:pass}
