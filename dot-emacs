@@ -139,6 +139,10 @@
 (put 'erase-buffer 'disabled nil)
 (put 'dired-find-alternate-file 'disabled nil)
 
+; make scripts (files that start with #!) executable after saving
+(add-hook 'after-save-hook
+          'executable-make-buffer-file-executable-if-script-p)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Keybindings
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
