@@ -1,10 +1,11 @@
-(setq user-mail-address "fidelramos@gmail.com")
-(setq user-full-name "Fidel Ramos Sañudo")
+; copy this file to user-preferences.el and change or add whatever you need
+
+(setq user-mail-address "user@example.com")
+(setq user-full-name "Fidel Ramos")
 
 (setq org-agenda-files (list (concat org-directory "/personal.org")
                              (concat org-directory "/work.org")
-                             (concat org-directory "/projects.org")
-                             (concat org-directory "/anniversaries.org")))
+                             ))
 
 (eval-after-load "color-theme"
   '(progn
