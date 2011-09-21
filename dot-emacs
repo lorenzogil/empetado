@@ -288,7 +288,14 @@
 
 (load-file "~/.emacs.d/emacs-for-python/epy-init.el")
 
-(load-library "flymake-cursor")
+; use pyflakes for flymake
+(epy-setup-checker "pyflakes %f")
+
+; load django snippets
+(epy-django-snippets)
+
+; disable highlightning current line
+(global-hl-line-mode 0)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; XML mode
