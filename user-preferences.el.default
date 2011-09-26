@@ -7,12 +7,11 @@
                              (concat org-directory "/work.org")
                              ))
 
-(eval-after-load "color-theme"
-  '(progn
-     (color-theme-initialize)
-     (color-theme-dark-laptop)))
+(load-theme "tango-dark")
 
-(setq-default erc-email-userid "Haplo")
-(setq-default erc-nick "Haplo")
-; (setq-default erc-nickserv-passwords '((freenode (("nick" . "password")))))
-(setq-default erc-user-full-name "Fidel Ramos")
+(defun erc-customization ()
+  (setq erc-email-userid "Haplo")
+  (setq erc-nick "Haplo")
+  ; (setq erc-nickserv-passwords '((freenode (("nick" . "password")))))
+  (setq erc-user-full-name "Fidel Ramos")
+)
