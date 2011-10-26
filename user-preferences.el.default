@@ -7,7 +7,7 @@
                              (concat org-directory "/work.org")
                              ))
 
-(load-theme "tango-dark")
+(load-theme 'manoj-dark)
 
 (defun erc-customization ()
   (setq erc-email-userid "Haplo")
