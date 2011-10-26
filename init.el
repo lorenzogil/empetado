@@ -38,9 +38,6 @@
                (setq magit-repo-dirs '("~/Code/"))
                (global-set-key (kbd "C-x C-g") 'magit-status)))
 
-   (:name undo-tree           ; keep and browse complete undo history
-	  :after (lambda ()
-               (global-undo-tree-mode)))
    (:name browse-kill-ring    ; navigate all entries in the kill ring
 	  :after (lambda ()
                (global-set-key (kbd "C-c k") 'browse-kill-ring)
@@ -141,6 +138,7 @@
  my:el-get-packages
  '(el-get                 ; el-get is self-hosting
    auto-complete          ; complete as you type with overlays
+   undo-tree              ; keep and browse complete undo history
   ))
 
 (when (el-get-executable-find "cvs")
