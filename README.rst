@@ -71,9 +71,9 @@ Emacs packages that empetado uses:
 
  * *autoconf* and *make* (just install **build-essentials** in Debian/Ubuntu)
  * *git* (**git-core** package in Debian/Ubuntu).
- * *mpg321*, *ogg123*, *mplayer* (for use by EMMS).
+ * *mpg321*, *ogg123*, *mplayer* (for use by EMMS, all are packages in Debian/Ubuntu).
  * *makeinfo* (for installing magit, **texinfo** package in Debian/Ubuntu).
  * reStructuredText tools (**python-docutils** package in Debian/Ubuntu).
  * *CVS* (**cvs** package in Debian/Ubuntu).
  * *w3m* (as a dependency for EMMS, **w3m** package in Debian/Ubuntu).
- * *Subversion* (optional, **subversion** package in Debian/Ubuntu).
+ * *Subversion* (**subversion** package in Debian/Ubuntu).
