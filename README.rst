@@ -28,9 +28,9 @@ Are you wondering why the "Tight Ass"? Because `sexy sells!`_
 INSTALLATION
 ============
 
-Clone the repository at ~/.emacs.d::
+Clone the repository to ~/.emacs.d::
 
- $ git clone git@github.com:haplo/empetado.git ~/.emacs.d
+ $ git clone git://github.com/haplo/empetado.git ~/.emacs.d --branch emacs24
 
 Get code from git submodules::
 
@@ -41,6 +41,7 @@ Get code from git submodules::
 Create a file with your user preferences::
 
  $ cp user_preferences.el.default user_preferences.el
+ # remember to edit user_preferences.el after copying it
 
 empetado uses `el-get`_ to install and update packages. Before starting emacs
 for the first time remember to check the `dependencies`_ section to install the
