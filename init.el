@@ -338,6 +338,9 @@
 ; region commenting
 (global-set-key (kbd "C-;") 'comment-or-uncomment-region)
 
+; whitespace cleanup
+(global-set-key "\C-c\C-w" 'whitespace-cleanup)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Org-mode
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
