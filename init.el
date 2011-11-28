@@ -351,7 +351,10 @@
 (global-set-key "\C-cl" 'org-store-link)
 (global-set-key "\C-ca" 'org-agenda)
 (global-set-key "\C-cb" 'org-iswitchb)
-(global-set-key "\C-cc" 'org-capture)
+; capture tasks in org-mode directly, without going through template selection
+(global-set-key "\C-ct" (lambda ()
+                          (interactive) (org-capture nil "t")))
+
 (setq org-disputed-keys (quote (([(shift up)] . [(meta shift up)])
                                 ([(shift down)] . [(meta shift down)])
                                 ([(shift left)] . [(meta shift left)])
