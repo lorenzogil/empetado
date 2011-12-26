@@ -132,13 +132,17 @@
                (setq erc-public-away-p t)
                (if (fboundp 'erc-customization) ; erc-customization should be defined
                    (erc-customization))))       ; in user-preferences.el
+   (:name undo-tree    ; keep and browse complete undo history
+	  :after (lambda ()
+	       (require 'undo-tree)
+               (global-undo-tree-mode)))
  ))
 
 (setq
  my:el-get-packages
  '(el-get                 ; el-get is self-hosting
    auto-complete          ; complete as you type with overlays
-   undo-tree              ; keep and browse complete undo history
+   js2-mode               ; better Javascript mode
   ))
 
 (when (el-get-executable-find "cvs")
