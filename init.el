@@ -300,6 +300,9 @@
 ; has no unsaved changes
 (global-auto-revert-mode 1)
 
+; echo keystrokes after 0.1s (default is 1s)
+(setq echo-keystrokes 0.1)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Keybindings
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
