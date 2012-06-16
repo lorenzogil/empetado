@@ -231,6 +231,9 @@
 ; display current filename or buffer name in the window title bar
 (setq frame-title-format '(buffer-file-name "%f" ("%b")))
 
+; custom themes path
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Behavior
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
