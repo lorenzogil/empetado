@@ -234,6 +234,13 @@
 ; custom themes path
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 
+; force white cursor on every frame
+(set-cursor-color "gray80")
+(add-hook 'window-setup-hook
+          '(lambda () (set-cursor-color "gray80")))
+(add-hook 'after-make-frame-functions
+          '(lambda (f) (with-selected-frame f (set-cursor-color "gray80"))))
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Behavior
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
