@@ -452,6 +452,9 @@
 ; disable global-linum-mode
 (global-linum-mode 0)
 
+; disable automatic parenthesis and quote pairing
+(setq skeleton-pair nil)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; ReST mode (rst-mode)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
