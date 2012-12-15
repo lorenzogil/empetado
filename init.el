@@ -386,9 +386,6 @@
 ; record date and time when a task is marked as DONE
 (setq org-log-done t)
 
-; detect idle time when clock is running
-(setq org-clock-idle-time 10)
-
 ; disable linum-mode in org buffers, it's too slow
 (add-hook 'org-mode-hook
   '(lambda () (linum-mode 0)))
