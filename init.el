@@ -344,7 +344,7 @@
 
 ; shortcuts for calc
 (global-set-key "\C-xc" 'calc)
-(global-set-key "\C-x\C-c" 'calc) ; was save-buffers-kill-terminal
+;(global-set-key "\C-x\C-c" 'calc) ; was save-buffers-kill-terminal
 (global-set-key "\C-xC" 'full-calc)
 
 ; zap-back-to-char
