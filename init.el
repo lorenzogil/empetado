@@ -150,7 +150,6 @@
 
 (when (el-get-executable-find "svn")
   (loop for p in '(psvn             ; M-x svn-status
-                   yasnippet        ; powerful snippet mode
                    )
 	do (add-to-list 'my:el-get-packages p)))
 
