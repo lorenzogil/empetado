@@ -33,10 +33,10 @@
                (global-set-key (kbd "M-x") 'smex)
                (global-set-key (kbd "M-X") 'smex-major-mode-commands)))
 
-   (:name magit				  ; git meet emacs, and a binding
-	  :after (lambda ()
-               (setq magit-repo-dirs '("~/Code/"))
-               (global-set-key (kbd "C-x C-g") 'magit-status)))
+;   (:name magit				  ; git meet emacs, and a binding
+;	  :after (lambda ()
+;               (setq magit-repo-dirs '("~/Code/"))
+;               (global-set-key (kbd "C-x C-g") 'magit-status)))
 
    (:name browse-kill-ring    ; navigate all entries in the kill ring
 	  :after (lambda ()
@@ -132,10 +132,10 @@
                (setq erc-public-away-p t)
                (if (fboundp 'erc-customization) ; erc-customization should be defined
                    (erc-customization))))       ; in user-preferences.el
-   (:name undo-tree    ; keep and browse complete undo history
-	  :after (lambda ()
-	       (require 'undo-tree)
-               (global-undo-tree-mode)))
+;   (:name undo-tree    ; keep and browse complete undo history
+;	  :after (lambda ()
+;	       (require 'undo-tree)
+;               (global-undo-tree-mode)))
  ))
 
 (setq
