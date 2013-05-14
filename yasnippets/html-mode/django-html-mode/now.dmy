@@ -1,3 +1,0 @@
-# contributor: Fidel Ramos (haplo)
-# --
-{% now "d/m/Y$1 H:i:s" %}

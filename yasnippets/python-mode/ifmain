@@ -1,4 +1,0 @@
-# This was cloned from a TextMate bundle for yasnippet.
-# --
-if __name__ == '__main__':
-	${1:main()}$0
