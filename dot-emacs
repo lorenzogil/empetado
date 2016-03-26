@@ -501,19 +501,6 @@
 (setq-default erc-public-away-p t)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Microsoft Office
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; open .doc files through antiword
-(autoload 'no-word "no-word" "word to txt")
-(add-to-list 'auto-mode-alist '("\\.doc\\'" . no-word))
-
-; google maps support
-(add-to-list 'load-path "~/proyectos/jd-el")
-(require 'google-maps)
-
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; org mode
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
