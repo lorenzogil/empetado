@@ -410,5 +410,8 @@
 ;; user preferences
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; load user preferences at the end to redefine defaults
-(load-library "user-preferences")
+; set user preferences at the end to redefine defaults
+(setq user-mail-address "lorenzo.gil.sanchez@gmail.com")
+(setq user-full-name "Lorenzo Gil")
+
+(load-theme 'wombat t)
