@@ -301,9 +301,9 @@
 ;; Magit (Git frontend)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(require 'magit)
-
-(setq-default magit-repo-dirs '("~/code/"))
+; To install magit do:
+;
+; M-x package-install RET magit RET
 
 (global-set-key (kbd "C-x C-g") 'magit-status)
 
