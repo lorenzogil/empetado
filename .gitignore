@@ -1,4 +1,5 @@
 auto-save-list
+elpa
 image-dired
 tramp
-user-preferences.el
+misc/user-preferences.el

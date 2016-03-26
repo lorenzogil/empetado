@@ -13,9 +13,6 @@
 ;; Visual customization
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; color theme
-;(require 'color-theme)
-
 ; skip welcome screen
 (setq inhibit-startup-screen t)
 
@@ -414,4 +411,4 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; load user preferences at the end to redefine defaults
-;(load-library "user-preferences")
+(load-library "user-preferences")
