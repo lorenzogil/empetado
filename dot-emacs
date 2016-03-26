@@ -190,11 +190,6 @@
 (global-set-key (kbd "M-0") 'delete-window) ; was digit-argument
 (global-set-key (kbd "M-s") 'other-window) ; was center-line
 
-; shortcuts for calc
-(global-set-key "\C-xc" 'calc)
-(global-set-key "\C-x\C-c" 'calc) ; was save-buffers-kill-terminal
-(global-set-key "\C-xC" 'full-calc)
-
 ; zap-back-to-char
 (global-set-key "\C-\M-z" #'(lambda (arg char)
                               (interactive "p\ncBack-zap to char: ")
