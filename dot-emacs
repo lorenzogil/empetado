@@ -14,7 +14,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; color theme
-(require 'color-theme)
+;(require 'color-theme)
 
 ; skip welcome screen
 (setq inhibit-startup-screen t)
@@ -150,7 +150,7 @@
 (global-undo-tree-mode)
 
 ; browse the kill ring (binded to "C-c k" below)
-(require 'browse-kill-ring)
+;(require 'browse-kill-ring)
 
 ; integrate copy/paste with X
 (setq x-select-enable-clipboard t)
@@ -311,13 +311,13 @@
 ;; Python environment
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(load-file "~/.emacs.d/emacs-for-python/epy-init.el")
+;(load-file "~/.emacs.d/emacs-for-python/epy-init.el")
 
 ; use pyflakes for flymake
-(epy-setup-checker "pyflakes %f")
+;(epy-setup-checker "pyflakes %f")
 
 ; load django snippets
-(epy-django-snippets)
+;(epy-django-snippets)
 
 ; disable highlightning current line
 (global-hl-line-mode 0)
@@ -364,16 +364,16 @@
 ;; Autocomplete
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(require 'auto-complete)
-(require 'auto-complete-css)
-(require 'auto-complete-python)
-(require 'auto-complete-yasnippet)
-(global-auto-complete-mode t)
-(define-key ac-complete-mode-map "\t" 'ac-complete)
-(define-key ac-complete-mode-map "\r" nil)
-(add-hook 'python-mode-hook
-          (lambda ()
-            (setq ac-sources '(ac-source-ropemacs ac-source-yasnippet))))
+;(require 'auto-complete)
+;(require 'auto-complete-css)
+;(require 'auto-complete-python)
+;(require 'auto-complete-yasnippet)
+;(global-auto-complete-mode t)
+;(define-key ac-complete-mode-map "\t" 'ac-complete)
+;(define-key ac-complete-mode-map "\r" nil)
+;(add-hook 'python-mode-hook
+;          (lambda ()
+;            (setq ac-sources '(ac-source-ropemacs ac-source-yasnippet))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; PHP xdebug support
@@ -422,4 +422,4 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; load user preferences at the end to redefine defaults
-(load-library "user-preferences")
+;(load-library "user-preferences")
