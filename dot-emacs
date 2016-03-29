@@ -5,7 +5,7 @@
 ;; Packages
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(setq package-list '(magit))
+(setq package-list '(magit undo-tree))
 
 (require 'package)
 (add-to-list 'package-archives
@@ -157,7 +157,6 @@
 (setq-default dired-dwim-target t)
 
 ; use undo-tree for better undo
-(require 'undo-tree)
 (global-undo-tree-mode)
 
 ; browse the kill ring (binded to "C-c k" below)
