@@ -5,7 +5,7 @@
 ;; Packages
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(setq package-list '(magit smex undo-tree))
+(setq package-list '(magit smex flymake-python-pyflakes undo-tree))
 
 (require 'package)
 (add-to-list 'package-archives
@@ -181,6 +181,11 @@
 ; make dead keys work on graphic environments
 (load-library "iso-transl")
 
+; Display flymake errors on the minibuffer after half a second
+(custom-set-variables
+ '(help-at-pt-timer-delay 0.5)
+ '(help-at-pt-display-when-idle '(flymake-overlay)))
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Keybindings
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -312,8 +317,8 @@
 
 ;(load-file "~/.emacs.d/emacs-for-python/epy-init.el")
 
-; use pyflakes for flymake
-;(epy-setup-checker "pyflakes %f")
+(add-hook 'python-mode-hook 'flymake-python-pyflakes-load)
+(setq flymake-python-pyflakes-executable "flake8")
 
 ; load django snippets
 ;(epy-django-snippets)
