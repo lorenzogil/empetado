@@ -1,3 +1,11 @@
+;;; dot-emacs ---- Emacs configuration
+;;;
+;;; Commentary:
+;;;
+;;; Configuration for Emacs 24
+;;;
+;;; Code:
+;;;
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (add-to-list 'load-path "~/.emacs.d/autocomplete")
 
@@ -5,7 +13,8 @@
 ;; Packages
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(setq package-list '(magit smex flymake-python-pyflakes undo-tree))
+(defvar package-list)
+(setq package-list '(magit smex flycheck undo-tree))
 
 (require 'package)
 (add-to-list 'package-archives
@@ -133,8 +142,10 @@
 (setq-default calendar-week-start-day 1)
 
 ;; keep session between emacs runs (~/.emacs.desktop)
+(defvar desktop-save)
 (setq desktop-save 'if-exists)
 (desktop-save-mode 1)
+(defvar desktop-globals-to-save)
 (setq desktop-globals-to-save
       (append '((extended-command-history . 50)
                 (file-name-history        . 200)
@@ -182,9 +193,9 @@
 (load-library "iso-transl")
 
 ; Display flymake errors on the minibuffer after half a second
-(custom-set-variables
- '(help-at-pt-timer-delay 0.5)
- '(help-at-pt-display-when-idle '(flymake-overlay)))
+;(custom-set-variables
+; '(help-at-pt-timer-delay 0.5)
+; '(help-at-pt-display-when-idle '(flymake-overlay)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Keybindings
@@ -236,6 +247,8 @@
 (global-set-key "\C-ca" 'org-agenda)
 (global-set-key "\C-cb" 'org-iswitchb)
 (global-set-key "\C-cc" 'org-capture)
+(defvar org-disputed-keys)
+(defvar org-replace-disputed-keys)
 (setq org-disputed-keys (quote (([(shift up)] . [(meta shift up)])
                                 ([(shift down)] . [(meta shift down)])
                                 ([(shift left)] . [(meta shift left)])
@@ -244,13 +257,17 @@
                                 ([(control shift left)] . [(control meta shift left)])))
       org-replace-disputed-keys t)
 
+(defvar org-directory)
 (setq org-directory "~/Docs/Org")
+(defvar org-default-notes-file)
 (setq org-default-notes-file (concat org-directory "/notes.org"))
 
 ; record date and time when a task is marked as DONE
+(defvar org-log-done)
 (setq org-log-done t)
 
 ; detect idle time when clock is running
+(defvar org-clock-idle-time)
 (setq org-clock-idle-time 10)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -317,8 +334,7 @@
 
 ;(load-file "~/.emacs.d/emacs-for-python/epy-init.el")
 
-(add-hook 'python-mode-hook 'flymake-python-pyflakes-load)
-(setq flymake-python-pyflakes-executable "flake8")
+(global-flycheck-mode)
 
 ; load django snippets
 ;(epy-django-snippets)
@@ -421,3 +437,6 @@
 (setq user-full-name "Lorenzo Gil")
 
 (load-theme 'wombat t)
+
+(provide 'dot-emacs)
+;;; dot-emacs ends here
