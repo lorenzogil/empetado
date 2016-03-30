@@ -7,14 +7,13 @@
 ;;; Code:
 ;;;
 (add-to-list 'load-path "~/.emacs.d/lisp")
-(add-to-list 'load-path "~/.emacs.d/autocomplete")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Packages
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defvar package-list)
-(setq package-list '(magit smex flycheck undo-tree yasnippet))
+(setq package-list '(auto-complete magit smex flycheck undo-tree yasnippet))
 
 (require 'package)
 (add-to-list 'package-archives
@@ -385,6 +384,8 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (yas-global-mode 1)
+
+(global-auto-complete-mode)
 
 ;(require 'auto-complete)
 ;(require 'auto-complete-css)
