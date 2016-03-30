@@ -193,9 +193,9 @@
 (load-library "iso-transl")
 
 ; Display flymake errors on the minibuffer after half a second
-;(custom-set-variables
-; '(help-at-pt-timer-delay 0.5)
-; '(help-at-pt-display-when-idle '(flymake-overlay)))
+(custom-set-variables
+ '(help-at-pt-timer-delay 0.5)
+ '(help-at-pt-display-when-idle '(flycheck-overlay)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Keybindings
