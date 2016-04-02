@@ -79,7 +79,9 @@
          (match-end 0)
          'face (list :background
                      (match-string-no-properties 0)))))))
+
 (defun hexcolour-add-to-font-lock ()
+  "Function to call our hexcolour highlighter."
   (font-lock-add-keywords nil hexcolour-keywords))
 
 (add-hook 'css-mode-hook 'hexcolour-add-to-font-lock)
@@ -103,6 +105,7 @@
 
 ; freedesktop standard fullscreen
 (defun fullscreen ()
+  "Activate the full screen mode."
   (interactive)
   (x-send-client-message nil 0 nil "_NET_WM_STATE" 32
                          '(2 "_NET_WM_STATE_FULLSCREEN" 0)))
