@@ -375,6 +375,9 @@
 ;; Django HTML mode
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+(require 'python-django)
+(global-set-key (kbd "C-x j") 'python-django-open-project)
+
 (require 'django-html-mode)
 
 ; associate by default with .html files
