@@ -384,7 +384,7 @@
 (require 'django-html-mode)
 
 ; associate by default with .html files
-(add-to-list 'auto-mode-alist '("\\.html$'" . django-html-mode))
+(add-to-list 'auto-mode-alist '("\\.[sx]?html?\\(\\.[a-zA-Z_]+\\)?\\'" . django-html-mode))
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
