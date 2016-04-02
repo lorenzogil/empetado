@@ -199,6 +199,9 @@
  '(help-at-pt-timer-delay 0.5)
  '(help-at-pt-display-when-idle '(flycheck-overlay)))
 
+; Asume variables in .dir-locals.el are safe
+(setq enable-local-variables nil)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Keybindings
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
