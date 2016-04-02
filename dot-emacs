@@ -276,11 +276,10 @@
 ;; Ido (Interactively Do Things)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(require 'ido)
 (ido-mode t)
 
 ; allow fuzzy searching for consecutive characters when there are no results
-(setq ido-enable-flex-matching t)
+(setq-default ido-enable-flex-matching t)
 
 ; take filename from cursor if exists
 (setq-default ido-use-filename-at-point 'guess)
@@ -300,7 +299,6 @@
 ;; Uniquify (smart buffer renaming)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(require 'uniquify)
 (setq uniquify-buffer-name-style 'reverse)
 (setq uniquify-separator "/")
 ; rename after killing uniquified
