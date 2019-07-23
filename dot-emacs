@@ -13,7 +13,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defvar package-list)
-(setq package-list '(auto-complete magit smex flycheck rust-mode scss-mode undo-tree yasnippet))
+(setq package-list '(magit elpy rust-mode scss-mode smex yasnippet))
 
 (require 'package)
 (add-to-list 'package-archives
@@ -171,9 +171,6 @@
 ; ease operations between two direds side by side
 (setq-default dired-dwim-target t)
 
-; use undo-tree for better undo
-(global-undo-tree-mode)
-
 ; browse the kill ring (binded to "C-c k" below)
 ;(require 'browse-kill-ring)
 
@@ -195,11 +192,6 @@
 
 ; make dead keys work on graphic environments
 (load-library "iso-transl")
-
-; Display flymake errors on the minibuffer after half a second
-(custom-set-variables
- '(help-at-pt-timer-delay 0.5)
- '(help-at-pt-display-when-idle '(flycheck-overlay)))
 
 ; Asume variables in .dir-locals.el are safe
 (setq enable-local-variables nil)
@@ -337,9 +329,7 @@
 ;; Python environment
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;(load-file "~/.emacs.d/emacs-for-python/epy-init.el")
-
-(global-flycheck-mode)
+(elpy-enable)
 
 ; load django snippets
 ;(epy-django-snippets)
@@ -374,21 +364,6 @@
 (add-to-list 'auto-mode-alist '("\\.xml\\'" . nxml-mode))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Rope & Ropemacs (Python refactoring)
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-;; Initialize Pymacs
-;(autoload 'pymacs-apply "pymacs")
-;(autoload 'pymacs-call "pymacs")
-;(autoload 'pymacs-eval "pymacs" nil t)
-;(autoload 'pymacs-exec "pymacs" nil t)
-;(autoload 'pymacs-load "pymacs" nil t)
-
-;; Initialize Rope
-;(pymacs-load "ropemacs" "rope-")
-;(setq ropemacs-enable-autoimport t)
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Django HTML mode
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -407,25 +382,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (setq sgml-validate-command '"nsgmls -s -c /usr/share/sgml/xml.soc")
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Autocomplete
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-(yas-global-mode 1)
-
-(global-auto-complete-mode)
-
-;(require 'auto-complete)
-;(require 'auto-complete-css)
-;(require 'auto-complete-python)
-;(require 'auto-complete-yasnippet)
-;(global-auto-complete-mode t)
-;(define-key ac-complete-mode-map "\t" 'ac-complete)
-;(define-key ac-complete-mode-map "\r" nil)
-;(add-hook 'python-mode-hook
-;          (lambda ()
-;            (setq ac-sources '(ac-source-ropemacs ac-source-yasnippet))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; PHP xdebug support
