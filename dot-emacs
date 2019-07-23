@@ -13,11 +13,13 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defvar package-list)
-(setq package-list '(auto-complete magit smex flycheck undo-tree yasnippet))
+(setq package-list '(auto-complete magit smex flycheck rust-mode scss-mode undo-tree yasnippet))
 
 (require 'package)
 (add-to-list 'package-archives
 	     '("melpa-stable" . "http://stable.melpa.org/packages/") t)
+(add-to-list 'package-archives
+	     '("melpa" . "http://melpa.org/packages/") t)
 
 ; activate all the packages (in particular autoloads)
 (package-initialize)
@@ -353,6 +355,18 @@
 (setq-default js-indent-level 2)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; SCSS mode
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; 2 spaces indentation
+(require 'scss-mode)
+(defun my-scss-mode-hook ()
+  "Hooks for SASS mode."
+  (setq-default scss-compile-at-save nil)
+)
+(add-hook 'scss-mode-hook 'my-scss-mode-hook)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; XML mode
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -385,6 +399,7 @@
 
 ; associate by default with .html files
 (add-to-list 'auto-mode-alist '("\\.[sx]?html?\\(\\.[a-zA-Z_]+\\)?\\'" . django-html-mode))
+(add-to-list 'auto-mode-alist '("\\.jinja2\\'" . django-html-mode))
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -430,6 +445,13 @@
 
 ; auto-update the TOC after adjusting a section title
 (add-hook 'rst-adjust-hook 'rst-toc-update)
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Rust mode (rust-mode)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(add-to-list 'auto-mode-alist '("\\.rs$" . rust-mode))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; ERC (IRC client)
